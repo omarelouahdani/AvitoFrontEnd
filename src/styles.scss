@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.navbar {
+  padding-left: 80px;
+}
+.navbar-brand{
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 2em;
+  color:#262626;
+}
+.navbar-light .navbar-nav .nav-item .nav-link:hover,
+.navbar-light .navbar-nav .nav-item.active .nav-link{
+ color: blue;
+
+}
+.navbar-light .navbar-nav .nav-item .nav-link
+{
+  color: #262626;
+  padding: 5px 15px;
+}
+.navbar-light .navbar-toggler {
+  border:none;
+  color:#fff;
+  border: 2px solid #7f7f7f;
+
+}
+.btn.btn-flat {
+  border-radius: 0;
+  border-width: 1px;
+  box-shadow: none;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+  color: white;
+}
+.bg-gradient-warning {
+  background: #ff7700;
+}
+.bg-gradient-warning {
+  color: #1f2d3d;
+}
+.ButtonElement[data-display=flex][_ngcontent-webapp-c80] {
+  display: -webkit-box;
+  display: flex;
+}
+
+.widget-user-2 .widget-user-header {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  padding: 1rem;
+}
+.bg-warning, .bg-warning>a {
+  color: #1f2d3d!important;
+}
+.bg-warning {
+  background-color: #ffc107!important;
+}
+.bg-warning {
+  background-color: #ffc107!important;
+}
+.bg-gradient-warningg {
+  background: #fff;
+}
+
