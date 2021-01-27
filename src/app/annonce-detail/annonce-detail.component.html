@@ -1,0 +1,158 @@
+<section class="content wrap">
+  <div class="container pt-5" [hidden]="annonceDetail">
+  <!-- Default box -->
+  <div class="card card-solid">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-12 col-sm-6">
+          <h3 class="d-inline-block d-sm-none">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
+          <div class="col-12">
+            <img src="http://localhost:9080/logo/{{photo.name}}" class="product-image" alt="Product Image" >
+          </div>
+          <div class="col-12 product-image-thumbs">
+
+            <div *ngFor="let p of photos" class="product-image-thumb" ><img src="http://localhost:9080/logo/{{p.name}}" alt="Product Image" (click)="changePhoto(p)"></div>
+
+          </div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <h3 class="my-3">{{article.designation}}</h3>
+          <p>{{article.description}}</p>
+          <div class="bg-gray py-2 px-3 mt-4">
+            <h2 class="mb-0">
+              {{article.annonce.datePub | date : 'short'}}
+            </h2>
+            <h4 class="mt-0">
+              <small>Prix : {{article.prix}} </small>
+            </h4>
+          </div>
+          <hr>
+          <div class=" d-flex align-items-stretch">
+            <div class="card bg-light">
+              <div class="card-header text-muted border-bottom-0">
+                Digital Advisor Avito
+              </div>
+              <div class="card-body pt-0">
+                <div class="row">
+                  <div class="col-6">
+                    <h2 class="lead"><b>{{utilisateur.username}}</b></h2>
+                    <p class="text-muted text-sm"><b> </b>  </p>
+                    <ul class=" mb-0 fa-ul text-muted">
+                      <li class="small font-weight-bold"><span class="fa-li"><i class="fas fa-lg fa-building"></i></span> Address: {{ville.nom}}</li>
+                      <li class="small font-weight-bold"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Phone #: {{utilisateur.telephone}}</li>
+                      <li class="small font-weight-bold"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Email: {{utilisateur.email}}</li>
+                    </ul>
+                  </div>
+                  <div class="col-6 text-center">
+                    <img src="http://localhost:9080/logo/{{utilisateur.photo}}" alt="" class="img-circle img-fluid border border-success">
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer">
+                <div class="text-right">
+
+                  <a  href="http://localhost/frontend/index.html" target = "_blank" class="btn btn-sm btn-primary">
+                    <i class="fas fa-user"></i> Message
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="mt-4 product-share">
+            <a href="#" class="text-gray">
+              <i class="fab fa-facebook-square fa-2x"></i>
+            </a>
+            <a href="#" class="text-gray">
+              <i class="fab fa-twitter-square fa-2x"></i>
+            </a>
+            <a href="#" class="text-gray">
+              <i class="fas fa-envelope-square fa-2x"></i>
+            </a>
+            <a href="#" class="text-gray">
+              <i class="fas fa-rss-square fa-2x"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div class="row mt-4">
+        <nav class="w-100">
+          <div class="nav nav-tabs" id="product-tab" role="tablist">
+            <a class="nav-item nav-link active" id="product-desc-tab" data-toggle="tab" href="#product-desc" role="tab" aria-controls="product-desc" aria-selected="true">Nos marques</a>
+            <a class="nav-item nav-link" id="product-comments-tab" data-toggle="tab" href="#product-comments" role="tab" aria-controls="product-comments" aria-selected="false">Qui sommes-nous ?</a>
+            <a class="nav-item nav-link" id="product-rating-tab" data-toggle="tab" href="#product-rating" role="tab" aria-controls="product-rating" aria-selected="false">DigitalAdvisor Avito</a>
+          </div>
+        </nav>
+        <div class="tab-content p-3" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="product-desc" role="tabpanel" aria-labelledby="product-desc-tab"> <h3>Nos marques dans le monde entier</h3> <hr>En Europe, Adevinta dirige des marketplaces classées en Autriche (Willhaben.at), en France (Leboncoin.fr), en Hongrie (Jofogas.hu), en Italie (Subito.it), en Espagne (Fotocasa.es, Milanuncios.es, Coches.net, Habitaclia.com, Infojobs.net), au Royaume-Uni (Shpock.com). En Amérique Latine, Adevinta est présent au Brésil (Olx.com.br), en Colombie (Fincaraiz.com.co), au Chili (Yapo.cl) et au Mexique (Segundamano.mx). En Afrique du Nord, Adevinta est présent au Maroc (Avito.ma) et en Tunisie (Tayara.tn). </div>
+          <div class="tab-pane fade" id="product-comments" role="tabpanel" aria-labelledby="product-comments-tab"> <span class="text-primary font-weight-bold">DegitalAdvisorAvito.ma</span> est détenue par Avito SCM SARL, une société du groupe Adevinta, leader en Europe des plateformes de marchés (Marketplace). Son activité se développe dans les marchés matures tels que la France, l'Espagne, l'Italie, le Royaume-Uni, l'Allemagne et l'Autriche ainsi que dans des marchés en expansion tels que l'Europe de l'Est, l'Amérique Latine et l'Afrique du Nord. Adevinta compte 2800 employés à travers le monde. </div>
+          <div class="tab-pane fade" id="product-rating" role="tabpanel" aria-labelledby="product-rating-tab"> <h3>Le bon choix pour acheter et vendre en toute sécurité au Maroc.</h3>
+            Nous sommes convaincus que avito.ma constitue le choix le plus sûr et le plus pratique pour tout vendre ou acheter au Maroc. Ce service permet à tout utilisateur au Maroc de vendre ou d'acheter en toute simplicité dans sa région, sans inscription ni procédure compliquée. avito.ma met en rapport les vendeurs et les acheteurs du Maroc et offre une expérience utilisateur exceptionnelle.</div></div>
+      </div>
+    </div>
+    <!-- /.card-body -->
+  </div>
+  <!-- /.card -->
+</div>
+  <div class="container pt-5"  [hidden]="mailSection">
+     <div class="container-fluid" >
+
+
+      <!-- /.col -->
+
+        <div class="card card-primary card-outline">
+          <div class="card-header">
+            <h3 class="card-title">Compose New Message</h3>
+          </div>
+          <!-- /.card-header -->
+          <form (ngSubmit)="onSubmit(f)" #f="ngForm"  class="was-validated">
+              <div class="card-body">
+
+            <div class="form-group row">
+              <label class="col-md-2" for="from"> From :</label>
+             <input id="from" class="form-control col-md-10" disabled="true" [value]="this.utilisateurConnecter.email"  name="from" required>
+            </div>
+            <div class="form-group row">
+              <label class="col-md-2" for="to"> to :</label>
+              <input id="to" class="form-control col-md-10" [value]="utilisateur.email" disabled="true"  name="to" required>
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" placeholder="Subject:" name="subject"  required ngModel>
+            </div>
+            <div  class="form-group">
+                   <textarea  class="form-control"  style="height: 300px" name="message" ngModel required>
+
+
+
+                    </textarea>
+            </div>
+
+          </div>
+            <div class="card-footer">
+              <div class="float-right">
+                <button type="button" class="btn btn-default"><i class="fas fa-pencil-alt"></i> Draft</button>
+                <button type="submit" class="btn btn-primary" [disabled]="f.invalid"> Send</button>
+              </div>
+              <button type="reset" class="btn btn-default"><i class="fas fa-times"></i> Discard</button>
+            </div>
+          </form>
+          <!-- /.card-body -->
+
+          <!-- /.card-footer -->
+        </div>
+        <!-- /.card -->
+
+      <!-- /.col -->
+
+    <!-- /.row -->
+      </div>
+  </div>
+</section>
+

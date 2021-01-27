@@ -18,18 +18,18 @@ body {
   margin-top: -85px;
 }
 .modal-dialog.cascading-modal {
-
+  margin: auto;
   margin-top:10%;
 }
 
 .modal-dialog {
   max-width: 500px;
-
+  margin: 1.75rem auto;
 }
 .modal-dialog {
   position: relative;
   width: auto;
-
+  margin: .5rem;
   pointer-events: none;
 }
 *, *::before, *::after {
@@ -132,7 +132,7 @@ div {
   border: 0;
   -webkit-transition: all .4s;
   transition: all .4s;
-}nav-item
+}
 .nav-tabs .nav-link {
   border: 1px solid transparent;
   border-top-left-radius: .25rem;
@@ -332,53 +332,182 @@ element.style {
   font-weight: 600;
   text-decoration: none;
 }
-
-.widget-user-2 .widget-user-image>img {
-  float: left;
-  height: auto;
-  width: 65px;
+.mm{
+  margin-left:9em;
 }
 
-.elevation-2 {
-  box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)!important;
-}
-.img-circle {
-  border-radius: 50%;
-}
-img {
-  vertical-align: middle;
-  border-style: none;
-}
-.lnk{
 
-    display: block;
-    padding: .5rem 1rem;
-
-
-    color: #007bff;
-    text-decoration: none;
-    background-color: transparent;
-
+.centered-form{
+  margin-top: 60px;
 }
-.flex-column {
-  -ms-flex-direction: column!important;
-  flex-direction: column!important;
+
+.centered-form .panel{
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
 }
-.card .nav.flex-column>li {
-  border-bottom: 1px solid rgba(0,0,0,.125);
-  margin: 0;
+*[role="form"] {
+  max-width: 530px;
+  padding: 15px;
+  margin: 0 auto;
+  border-radius: 0.3em;
+  background-color: #f2f2f2;
 }
-.nav-link {
-  display: block;
-  padding: .5rem 1rem;
+
+*[role="form"] h2 {
+  font-family: 'Open Sans' , sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.navbar-laravel
+{
+  box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+
+.navbar-brand , .nav-link, .my-form, .login-form
+{
+  font-family: Raleway, sans-serif;
+}
+
+.my-form
+{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.my-form .row
+{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.login-form
+{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.login-form .row
+{
+  margin-left: 0;
+  margin-right: 0;
+}
+.login-popup form .form-group.sign_up {
+  text-align: center;
+  font-weight: normal;
+}
+
+.login-popup form .form-group {
+  padding: 12px;
+}
+.login-popup form .form-group.sign_up div {
+  display: inline-block;
+}
+.login-popup form .form-group.sign_up a {
+  color: #1d72db;
+  font-weight: bold;
+}
+a:visited {
+  text-decoration: none;
+}
+a:link {
+  text-decoration: none;
 }
 a {
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
-nav-link a{
-  color: #007bff;
-  text-decoration: none;
-  background-color: transparent;
+.login-popup form .form-group.sign_up {
+  text-align: center;
+  font-weight: normal;
+}
+.login-popup form .form-group {
+  padding: 12px;
+}
+.radio.inline, .checkbox.inline {
+  display: inline-block;
+  padding-top: 2px;
+
+  vertical-align: middle;
+}
+
+.radio, .checkbox, .text {
+  min-height: 20px;
+
+  font-weight: normal;
+}
+label {
+  display: block;
+
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 18px;
+}
+label, input, button, select, textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+#name {
+  margin-top: 6px;
+}
+
+.input-icon input {
+  padding-left: 10px !important;
+}
+.no-margin {
+  margin: 0;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 18px;
+}
+
+label, input, button, select, textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+.relative {
+  position: relative;
+}
+.relative {
+  position: relative;
+}
+.relative {
+  position: relative;
+}
+.fonticon-user:before {
+  content: '\e803';
+}
+[class^="fonticon-"]:before, [class*=" fonticon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  margin-left: .2em;
+  /* font-size: 120%; */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }

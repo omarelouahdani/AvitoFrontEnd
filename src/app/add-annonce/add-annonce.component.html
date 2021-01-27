@@ -1,0 +1,117 @@
+<section class="margt wrap">
+  <div class="container">
+<form (ngSubmit)="submit()" #f="ngForm" id="regForm" class="was-validated">
+
+  <!-- One "tab" for each step in the form: -->
+  <div class="tab">
+    <div class="text-center pb-4">
+    <h2>Commencez par l’essentiel</h2>
+    </div>
+    <h5>Type de transaction :</h5>
+    <div class="form-group">
+      <select class="custom-select" name="typeAnnonce" required [(ngModel)]="data.typeAnnonce">
+        <option value="vente">Vente</option>
+        <option value="vente">Demmande</option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+
+    <div class="form-group" *ngIf="villesfiltrer">
+      <h5>Ville :</h5>
+      <select class="custom-select" (ngModelChange)="onChangeVille($event)" name="statusVille" required ngModel>
+        <option [ngValue]="ville"  *ngFor="let ville of villesfiltrer">{{ville.nom}}
+        </option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+    <div class="form-group" *ngIf="secteursF">
+      <h5>Secteur :</h5>
+      <select class="custom-select"  name="statusSecetur" [(ngModel)]="data.secteur"  required>
+        <option [ngValue]="secteur.nom"  *ngFor="let secteur of secteursF">{{secteur.nom}}
+        </option>
+      </select>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+  </div>
+  <div class="tab">
+    <div class="text-center pb-4">
+      <h2>DESCRIPTION DU BIEN</h2>
+    </div>
+
+    <div class="form-group">
+      <h4>Titre d'annonce</h4>
+      <input type="text" class="form-control is-valid" id="validationServer01" name="titreAnnonce"  required [(ngModel)]="data.titreAnnonce">
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+    <div class="form-group">
+      <h4>Prix : </h4>
+      <input type="number" class="form-control is-valid" id="validationServer01" name="prix"   required [(ngModel)]="data.prix">
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+    <div class="form-group">
+      <h4>description d'annonce :</h4>
+      <textarea class="form-control is-valid" id="exampleFormControlTextarea1" rows="3" name="description" required [(ngModel)]="data.descAnnonce"></textarea>
+      <div class="invalid-feedback">Example invalid custom select feedback</div>
+    </div>
+  </div>
+  <div class="tab"><h3>PHOTOS :</h3><br/>
+    <h5>Photos (6 maximum)</h5>
+    <div class="mwh9ms-3 dzwVHQ"><div class="sc-fzonZV fgnPNC" color="sea_normal"><svg class="av-icon sc-fzqyOu hpAgEv" height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="ErrorOutlineTitleID" style="fill: rgb(46, 107, 255); stroke: rgb(46, 107, 255); stroke-width: 0;"><title id="ErrorOutlineTitleID">ErrorOutline Icon</title><path d="M11 15h2v2h-2v-2zm0-8h2v6h-2V7zm.99-5C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path></svg><div class="sc-pANHa ehosvl"><span class="sc-fzqKxP bYSXGi"><ul class="mwh9ms-0 iuySUv"><h3 class="mwh9ms-2 gHkMBt">Conseils</h3><ul class="mwh9ms-0 iuySUv"><li class="mwh9ms-1 fmLcaS">Une annonce avec photos est 10 fois plus consultée qu'une annonce sans photos</li><li class="mwh9ms-1 fmLcaS">Prenez de belles photos bien éclairées.</li><li class="mwh9ms-1 fmLcaS">C'est la première impression qui compte!</li></ul></ul></span></div><button class="sc-AxmLO dFGnal" color="currentColor" type="button"><svg class="av-icon" height="32" width="32" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-labelledby="CloseTitleID" style="fill: currentcolor; stroke: currentcolor; stroke-width: 0;"><title id="CloseTitleID">Close Icon</title><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></button></div></div>
+
+
+    <div *ngFor="let progressInfo of progressInfos" class="mb-2">
+      <span>{{ progressInfo.fileName }}</span>
+      <div class="progress">
+        <div
+          class="progress-bar progress-bar-info progress-bar-striped"
+          role="progressbar"
+          attr.aria-valuenow="{{ progressInfo.value }}"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          [ngStyle]="{ width: progressInfo.value + '%' }"
+        >
+          {{ progressInfo.value }}%
+        </div>
+      </div>
+    </div>
+
+    <label class="btn btn-default">
+      <input type="file" maxlength="6"  multiple  (change)="selectFiles($event)" [disabled]="disablfile" />
+    </label>
+    <p class="text-danger">{{errorFile}}</p>
+
+
+    <div class="alert alert-light" role="alert">{{ message }}</div>
+
+    <div class="card">
+      <div class="card-header">List of Files</div>
+      <div class="card-body">
+      <ul
+        class="list-group list-group-flush"
+      >
+        <li class="list-group-item" *ngFor='let url of images'>
+          <img    [src]="url" height="150" width="200px" style="margin: 3px;">
+        </li>
+      </ul>
+      </div>
+    </div>
+   <button class="btn btn-success" type="submit" [disabled]="f.invalid"   [disabled]="!selectedFiles">Enregistrer</button>
+  </div>
+
+  <div style="overflow:auto;">
+    <div style="float:right;border-spacing: 70px">
+
+      <button type="button" id="nextBtn" (click)="test()" onclick="nextPrev(1)" >Next</button>
+    </div>
+  </div>
+  <!-- Circles which indicates the steps of the form: -->
+  <div style="text-align:center;margin-top:40px;">
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+    <span class="step"></span>
+  </div>
+
+</form>
+  </div>
+</section>

@@ -1,0 +1,69 @@
+<section class="wrap">
+<div class="container wrap">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4 mb-3">
+        <div class="container" id="regions" *ngIf="villes">
+          <p class="seo-lp-heading cg-title">Choisissez une ville</p>
+          <p class="cg-subtitle">Villes populaires</p>
+          <ul id="region_list_1" class="seo-lp-list"  style="list-style-type: circle;" >
+            <div  (click)="onGetAnnonces(ville)" *ngFor="let ville of villes._embedded.villes">
+              <li class="seo-lp-item  pl-1 clickable"  ><a class="seo-lp-anchor zz" [ngClass]="ville == currentVille ? 'active' : ''" >{{ville.nom}}</a>
+              </li>
+            </div>
+          </ul>
+          <span class="region_ruler_separator"></span>
+        </div>
+      </div>
+      <div class="col-8">
+        <h4>{{nombreArticles}} annonces pour <span style="color: #f56b2a;">{{typeAnnonce}}</span> au {{villeName}}</h4>
+        <ul class="nav nav-pills nav-fill mb-3">
+          <li class="nav-item nav_it" style="color: #1a1a1a;">
+            <button class="nav-link" [ngClass]="typeActive == 'TOUT' ? 'active' : '' " (click)="getToutProduit()">TOUT  {{nombreArticles}}</button>
+          </li>
+          <li class="nav-item nav_it">
+            <button class="nav-link" [ngClass]="typeActive == 'particulier' ? 'active' : '' " (click)="getArticleP()">PARTICULIER {{nombreArtParticulier}}</button>
+          </li>
+          <li class="nav-item nav_it">
+            <button class="nav-link" [ngClass]="typeActive == 'professionnel' ? 'active' : '' " (click)="getArticlePrf()" >PROFESSIONNEL {{nombreArtProff}}</button>
+          </li>
+          <li class="nav-item nav_it pl-2 ml-4" style="margin-left: 10px;">
+            <select class="form-control" (change)="getSortArticle($event)"><option selected="" value="time-desc" data-reactid="350"  >Tri : Plus récentes</option><option value="time-asc" data-reactid="351">Tri : Plus anciennes</option><option value="price-asc" data-reactid="352">Tri : Prix croissants</option><option value="price-desc" data-reactid="353">Tri : Prix décroissants</option></select>
+          </li>
+        </ul>
+
+        <div class="row" id="ads" *ngIf="articles">
+          <!-- Category Card -->
+          <div class="col-md-6 pb-5" *ngFor="let article of articles | paginate : {id : 'listing_pagination', itemsPerPage:5, currentPage: page, totalItems: totalRecords }">
+            <div class="card rounded ">
+              <button class="border-0 bg-white" [routerLink]="['/annonces/detail',article.idArticle]">
+              <div class="card-image">
+                <span class="card-notify-badge">{{article.designation}}</span>
+                <span class="card-notify-year">{{article.annonce.datePub | date: 'yyyy'}}</span>
+                <app-photo [photos]="article.photos"></app-photo>
+              </div>
+              <div class="card-image-overlay m-auto pb-3">
+
+                <span class="card-detail-badge">{{article.prix}} dh</span>
+                <span class="card-detail-badge text-right">{{article.annonce.datePub | date: 'short'}}</span>
+              </div>
+              </button>
+            </div>
+          </div>
+
+
+        </div>
+
+
+        <div>
+            <pagination-controls id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+

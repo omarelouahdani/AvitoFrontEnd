@@ -1,0 +1,655 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+#regForm {
+  background-color: #ffffff;
+  margin: 70px auto;
+  font-family: Raleway;
+  padding: 30px;
+  width: 70%;
+  min-width: 300px;
+}
+
+h1 {
+  text-align: center;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
+}
+
+/* Mark input boxes that gets an error on validation: */
+input.invalid {
+  background-color: #ffdddd;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: #bbbbbb;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #4CAF50;
+}
+.margt{
+
+  border-radius:1px solid #7f7f7f ;
+
+}
+.boxSection {
+  border: 1px solid #f2f2f2;
+  padding: 1.5rem;
+  margin-bottom: 1.8rem;
+  border-radius: 3px;
+}
+.p-0 {
+  padding: 0!important;
+}
+.mb-4, .my-4 {
+  margin-bottom: 1.5rem!important;
+}
+.col-lg-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.ml-0, .mx-0 {
+  margin-left: 0!important;
+}
+.mr-0, .mx-0 {
+  margin-right: 0!important;
+}
+.justify-content-start {
+  justify-content: flex-start!important;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.mb-0, .my-0 {
+  margin-bottom: 0!important;
+}
+.w-100 {
+  width: 100%!important;
+}
+
+ .himZKo {
+   display: block;
+ }
+.imageUploadComponent {
+  width: 100%;
+  margin-top: -12px;
+}
+.mb-2, .my-2 {
+  margin-bottom: .5rem!important;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+.dcoist {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px;
+}
+.fsQutk {
+  width: auto;
+}
+
+ .fsQutk {
+   padding: 0px;
+ }
+.imageUploadComponent .dropZone {
+  margin: 0;
+  width: 100%;
+}
+
+.imageUploadComponent .imagePreview {
+  margin: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.mb-sm-2, .my-sm-2 {
+   margin-bottom: .5rem!important;
+ }
+.imageUploadComponent .imagePreview .dropBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 182px;
+  height: 182px;
+  background-color: #fafafa;
+  border: .5px dashed rgba(0,0,0,.1);
+  text-align: center;
+  margin: 1rem 1rem 0 0;
+  color: #2e6bff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button, input {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+svg {
+  overflow: hidden;
+}
+img, svg {
+  vertical-align: middle;
+}
+
+user agent stylesheet
+svg:not(:root) {
+  overflow: hidden;
+}
+.dzwVHQ {
+  display: flex;
+}
+.fgnPNC {
+  padding: 16px;
+}
+
+ .fgnPNC {
+   display: flex;
+   align-items: flex-start;
+   color: rgb(74, 74, 74);
+   background-color: rgb(234, 240, 255);
+   padding: 12px;
+   border-radius: 4px;
+   border-width: 1px 1px 1px 4px;
+   border-style: solid;
+   border-color: rgb(46, 107, 255);
+   border-image: initial;
+ }
+.hpAgEv {
+  --icon-size: 32px;
+  padding-right: 16px;
+}
+
+ .hpAgEv {
+   --icon-size: 24px;
+   display: flex;
+   flex-shrink: 0;
+   width: var(--icon-size);
+   height: var(--icon-size);
+   padding-right: 8px;
+ }
+.dzwVHQ > :first-child > :nth-child(2) {
+  align-self: flex-start;
+}
+
+
+ .ehosvl {
+   padding-right: 24px;
+   flex-direction: row;
+ }
+
+ .ehosvl {
+   -webkit-box-flex: 1;
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   -webkit-box-pack: start;
+   justify-content: flex-start;
+   padding-right: 12px;
+ }
+.bYSXGi {
+  font-size: 16px;
+}
+
+ .bYSXGi {
+   align-self: center;
+   font-size: 14px;
+   margin-right: auto;
+ }
+.iuySUv {
+  max-width: 449px;
+  list-style: inside disc;
+  margin: 0px;
+  padding: 0px;
+}
+dl, ol, ul {
+  margin-top: 0;
+}
+address, dl, ol, ul {
+  margin-bottom: 1rem;
+}
+
+
+ .iuySUv > :not(:last-child) {
+   margin-bottom: 16px;
+ }
+
+ .iuySUv > :not(:last-child) {
+   margin-bottom: 8px;
+ }
+.boxSection h1, .boxSection h2, .boxSection h3, .boxSection h4, .boxSection h5, .boxSection h6 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #2d2d2d;
+}
+
+
+ .gHkMBt {
+   margin-bottom: 16px;
+   font-size: 24px !important;
+ }
+
+ .gHkMBt {
+   color: rgb(45, 45, 45);
+   margin-bottom: 8px;
+   font-size: 16px !important;
+ }
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+ .fgnPNC > :last-child {
+   flex-shrink: 0;
+ }
+[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: button;
+}
+
+ .dFGnal {
+   cursor: pointer;
+   --size: 24px;
+   width: var(--size);
+   height: var(--size);
+   position: relative;
+   display: inline-flex;
+   -webkit-box-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   align-items: center;
+   background-color: transparent;
+   color: inherit;
+   border-width: initial;
+   border-style: none;
+   border-color: initial;
+   border-image: initial;
+   border-radius: 64px;
+   padding: 0px;
+ }
+button, select {
+  text-transform: none;
+}
+button, input {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+button {
+  border-radius: 0;
+}
+element.style {
+  fill: currentcolor;
+  stroke: currentcolor;
+  stroke-width: 0;
+}
+
+ .dFGnal > svg {
+   width: 100% !important;
+   height: auto !important;
+ }
+svg {
+  overflow: hidden;
+}
+img, svg {
+  vertical-align: middle;
+}
+.dzwVHQ {
+  display: flex;
+}
+
+
+ .fgnPNC {
+   padding: 16px;
+ }
+
+ .fgnPNC {
+   display: flex;
+   align-items: flex-start;
+   color: rgb(74, 74, 74);
+   background-color: rgb(234, 240, 255);
+   padding: 12px;
+   border-radius: 4px;
+   border-width: 1px 1px 1px 4px;
+   border-style: solid;
+   border-color: rgb(46, 107, 255);
+   border-image: initial;
+ }
+element.style {
+  fill: rgb(46, 107, 255);
+  stroke: rgb(46, 107, 255);
+  stroke-width: 0;
+}
+
+
+
+ .hpAgEv {
+   --icon-size: 32px;
+   padding-right: 16px;
+ }
+
+ .hpAgEv {
+   --icon-size: 24px;
+   display: flex;
+   flex-shrink: 0;
+   width: var(--icon-size);
+   height: var(--icon-size);
+   padding-right: 8px;
+ }
+svg {
+  overflow: hidden;
+}
+img, svg {
+  vertical-align: middle;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+svg {
+  height: 32;
+  width: 32;
+}
+user agent stylesheet
+svg:not(:root) {
+  overflow: hidden;
+}
+.dzwVHQ > :first-child > :nth-child(2) {
+  align-self: flex-start;
+}
+
+ .ehosvl {
+   padding-right: 24px;
+   flex-direction: row;
+ }
+
+ .ehosvl {
+   -webkit-box-flex: 1;
+   flex-grow: 1;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   -webkit-box-pack: start;
+   justify-content: flex-start;
+   padding-right: 12px;
+ }
+.bYSXGi {
+  font-size: 16px;
+}
+
+ .bYSXGi {
+   align-self: center;
+   font-size: 14px;
+   margin-right: auto;
+ }
+.iuySUv {
+  max-width: 449px;
+  list-style: inside disc;
+  margin: 0px;
+  padding: 0px;
+}
+.iuySUv > :not(:last-child) {
+  margin-bottom: 16px;
+}
+
+ .iuySUv > :not(:last-child) {
+   margin-bottom: 8px;
+ }
+.iuySUv {
+  max-width: 449px;
+  list-style: inside disc;
+  margin: 0px;
+  padding: 0px;
+}
+.fmLcaS {
+  font-size: 16px;
+}
+
+ .fmLcaS {
+   font-size: 12px;
+   line-height: normal;
+   color: rgb(74, 74, 74);
+ }
+
+ .iuySUv > :not(:last-child) {
+   margin-bottom: 16px;
+ }
+
+ .iuySUv > :not(:last-child) {
+   margin-bottom: 8px;
+ }
+
+
+ .fmLcaS {
+   font-size: 16px;
+ }
+
+ .fmLcaS {
+   font-size: 12px;
+   line-height: normal;
+   color: rgb(74, 74, 74);
+ }
+.iuySUv > :not(:last-child) {
+  margin-bottom: 16px;
+}
+
+ .iuySUv > :not(:last-child) {
+   margin-bottom: 8px;
+ }
+
+
+ .fmLcaS {
+   font-size: 16px;
+ }
+
+ .fmLcaS {
+   font-size: 12px;
+   line-height: normal;
+   color: rgb(74, 74, 74);
+ }
+*, :after, :before {
+  box-sizing: border-box;
+}
+user agent stylesheet
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+[type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+  cursor: pointer;
+}
+
+ .fgnPNC > :last-child {
+   flex-shrink: 0;
+ }
+[type=button], [type=reset], [type=submit], button {
+  -webkit-appearance: button;
+}
+
+ .dFGnal {
+   cursor: pointer;
+   --size: 24px;
+   width: var(--size);
+   height: var(--size);
+   position: relative;
+   display: inline-flex;
+   -webkit-box-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   align-items: center;
+   background-color: transparent;
+   color: inherit;
+   border-width: initial;
+   border-style: none;
+   border-color: initial;
+   border-image: initial;
+   border-radius: 64px;
+   padding: 0px;
+ }
+button, select {
+  text-transform: none;
+}
+button, input {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+.dFGnal::before {
+  content: "";
+  position: absolute;
+  display: block;
+  --size: calc(100% + 12px);
+  width: var(--size);
+  height: var(--size);
+  background-color: rgb(155, 155, 155);
+  z-index: 0;
+  opacity: 0;
+  border-radius: 64px;
+  transition: opacity 210ms ease-out 0s;
+}
+element.style {
+  fill: currentcolor;
+  stroke: currentcolor;
+  stroke-width: 0;
+}
+
+ .dFGnal > svg {
+   width: 100% !important;
+   height: auto !important;
+ }
+svg {
+  overflow: hidden;
+}
+img, svg {
+  vertical-align: middle;
+}
+.fsQutk {
+  width: auto;
+}
+
+ .fsQutk {
+   padding: 0px;
+ }
+*, :after, :before {
+  box-sizing: border-box;
+}
+user agent stylesheet
+div {
+  display: block;
+}
+.imageUploadComponent .dropZone {
+  margin: 0;
+  width: 100%;
+}
+.imageUploadComponent .imagePreview {
+  margin: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mb-sm-2, .my-sm-2 {
+  margin-bottom: .5rem!important;
+}
+.imageUploadComponent .imagePreview .dropBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 182px;
+  height: 182px;
+  background-color: #fafafa;
+  border: .5px dashed rgba(0,0,0,.1);
+  text-align: center;
+  margin: 1rem 1rem 0 0;
+  color: #2e6bff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button, input {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+element.style {
+  fill: rgb(46, 107, 255);
+  stroke: rgb(46, 107, 255);
+  stroke-width: 0;
+}
+svg {
+  overflow: hidden;
+}
+img, svg {
+  vertical-align: middle;
+}
+.avatar-pic {
+  width: 150px;
+}
